@@ -1,0 +1,9 @@
+<div class="cards-container">
+    <app-card 
+        *ngFor = "let plan of plans"
+        [planType]="plan.type" 
+        [planPrice]="plan.price" 
+        [cardStyle]="plan.style"
+        (buttonClicked)="onCardButtonClicked(plan.type)"
+    ></app-card>
+</div>
